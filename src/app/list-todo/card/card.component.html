@@ -1,26 +1,24 @@
-<div class="wraper-card swiper-container" [swiper]="config" [(index)]="index" (click)="open($event)" [style.border-color]="checkBorder(todo.label)">
-  <div class="swiper-wrapper">
-    <div class="container" [ngClass]="{'active': openCard && verifyLength(todo.text)}">
-      <div class="row">
-        <div class="col-8">
-          <p class="title">{{todo.title | uppercase}}</p>
-        </div>
-        <div class="col-2">
-          <p class="hours">{{todo.houer | date:"HH:mm"}}</p>
-        </div>
+<div class="wraper-card" (click)="open($event)" [style.border-color]="checkBorder(todo.label)">
+  <div class="container" [ngClass]="{'active': openCard && verifyLength(todo.text)}">
+    <div class="row">
+      <div class="col-8">
+        <p class="title">{{todo.title | uppercase}}</p>
       </div>
-      <div class="row">
-        <div class="col-12" *ngIf="!openCard">
-          <p class="description">
-            {{todo.text | slice:0:31 | lowercase}}
-              <strong *ngIf="verifyLength(todo.text)">. . .</strong>
-          </p>
-        </div>
+      <div class="col-2">
+        <p class="hours">{{todo.houer | date:"HH:mm"}}</p>
       </div>
-      <div class="row">
-        <div class="col-12 text-todo" *ngIf="verifyLength(todo.text)">
-          <p>{{todo.text | lowercase}}</p>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-12" *ngIf="!openCard">
+        <p class="description">
+          {{todo.text | slice:0:31 | lowercase}}
+          <strong *ngIf="verifyLength(todo.text)">. . .</strong>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-todo" *ngIf="verifyLength(todo.text)">
+        <p>{{todo.text | lowercase}}</p>
       </div>
     </div>
   </div>

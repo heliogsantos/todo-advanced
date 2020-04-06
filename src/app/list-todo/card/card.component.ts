@@ -1,6 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SwiperComponent, SwiperDirective, SwiperConfigInterface,
-  SwiperScrollbarInterface, SwiperPaginationInterface } from 'ngx-swiper-wrapper';
 
 @Component({
   selector: 'app-card',
@@ -42,12 +40,6 @@ export class CardComponent implements OnInit {
  
   verifyLength(value: string): boolean {
     return value.length >= 30;
-  }
-
-
-
-  public onIndexChange(index: number) {
-    console.log('Swiper index: ', index);
   }
 
   ngOnInit() {
