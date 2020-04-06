@@ -13,8 +13,7 @@ export class ListTodoComponent implements OnInit {
   constructor(private data: DataService, private todoListService: TodoListService) { }
 
   todos: NewTask;
-
-  textSearch: any;
+  textSearch: string;
 
   ngOnInit() {
     this.data.mesagemFonte.subscribe(users => this.textSearch = users.Name);

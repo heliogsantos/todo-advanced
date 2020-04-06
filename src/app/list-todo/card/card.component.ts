@@ -37,7 +37,6 @@ export class CardComponent implements OnInit {
   open() {
     if(this.todo.text.length >= 30) this.openCard = !this.openCard;
   }
- 
   verifyLength(value) {
     return value.length >= 30;
   }

@@ -1,5 +1,4 @@
 import { Router } from '@angular/router';
-import { NewTask } from './../models/new-task';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { TodoListService } from './../services/todo-list.service';
@@ -14,8 +13,7 @@ export class FormComponent implements OnInit {
   constructor(private fb: FormBuilder, private todoListService: TodoListService, private router: Router) { }
 
   formTask: FormGroup;
-
-
+  
   labels: object[] = [
     {color: '#61bd4f', name: 'value1', id: 1},
     {color: '#eb5a46', name: 'value2', id: 2},
@@ -61,7 +59,6 @@ export class FormComponent implements OnInit {
   save(): void {
     this.saveTodo(this.formTask.value);
   }
-
 
   ngOnInit() {
     this.createFormTask();

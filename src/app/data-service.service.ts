@@ -15,7 +15,7 @@ export class DataService {
   public mesagemFonte = new BehaviorSubject(this.user);
   mesagemAtual = this.mesagemFonte.asObservable();
 
-  alterarMensagem(user: User): void {
+  alterarMensagem(user: User) {
     this.mesagemFonte.next(user);
   }
 

@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
   private route = new CheckUrl(this.router);
 
-  url(): string {
+  url() {
     return this.route.router.url;
   }
 
