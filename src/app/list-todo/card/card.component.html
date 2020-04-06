@@ -1,4 +1,4 @@
-<div class="wraper-card" (click)="open($event)" [style.border-color]="checkBorder(todo.label)">
+<div class="wraper-card" (click)="open()" [style.border-color]="checkBorder(todo.label)">
   <div class="container" [ngClass]="{'active': openCard && verifyLength(todo.text)}">
     <div class="row">
       <div class="col-8">

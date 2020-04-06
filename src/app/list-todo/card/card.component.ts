@@ -12,9 +12,9 @@ export class CardComponent implements OnInit {
   @Input() todo;
   openCard: boolean = false;
 
-  colors: string[] = ['#61bd4f','#eb5a46','#f2d600','#c377e0'];
+  colors = ['#61bd4f','#eb5a46','#f2d600','#c377e0'];
 
-  checkBorder(border: string): string {
+  checkBorder(border) {
     switch (border) {
       case 'value1':
         return this.colors[0]
@@ -34,17 +34,13 @@ export class CardComponent implements OnInit {
     }
   }
 
-  open(e): boolean {
-    if(this.todo.text.length >= 30) return this.openCard = !this.openCard;
+  open() {
+    if(this.todo.text.length >= 30) this.openCard = !this.openCard;
   }
  
-  verifyLength(value: string): boolean {
+  verifyLength(value) {
     return value.length >= 30;
   }
 
-  ngOnInit() {
-  
-  }
-
-
+  ngOnInit() {}
 }
