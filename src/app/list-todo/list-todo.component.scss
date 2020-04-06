@@ -8,3 +8,7 @@
     overflow-y: auto;
     padding: 20px;
 }
+
+.container::-webkit-scrollbar {
+    width: 0px;
+}
