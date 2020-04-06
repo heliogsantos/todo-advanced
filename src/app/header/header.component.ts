@@ -1,6 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
-import { CheckUrl } from './../models/check-url';
 import { Router } from '@angular/router';
+import { CheckUrl } from './check-url';
 
 @Component({
   selector: 'app-header',

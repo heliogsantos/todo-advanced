@@ -1,6 +1,7 @@
-import { NewTask } from './../models/new-task';
-import { TodoListService } from './../services/todo-list.service';
 import { Component, OnInit } from '@angular/core';
+
+import { NewTask } from './new-task';
+import { TodoListService } from './todo-list.service';
 import { DataService } from './../data-service.service';
 
 @Component({
@@ -16,7 +17,7 @@ export class ListTodoComponent implements OnInit {
   textSearch: string;
 
   ngOnInit() {
-    this.data.mesagemFonte.subscribe(users => this.textSearch = users.Name);
+    this.data.mesagemFonte.subscribe(users => this.textSearch = users);
        this.todoListService.getTodos().subscribe((todo: NewTask) => {
         this.todos = todo;
       });

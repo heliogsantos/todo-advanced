@@ -1,4 +1,3 @@
-import { User } from './models/user';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -6,17 +5,16 @@ import { BehaviorSubject } from 'rxjs';
 
 export class DataService {
 
-  public user = new User();
+  public user: string = "";
 
   constructor() {
-    this.user.Name = '';
+    this.user = '';
   }
 
   public mesagemFonte = new BehaviorSubject(this.user);
   mesagemAtual = this.mesagemFonte.asObservable();
 
-  alterarMensagem(user: User) {
+  alterarMensagem(user) {
     this.mesagemFonte.next(user);
   }
-
 }

@@ -14,7 +14,7 @@ import { CardComponent } from './list-todo/card/card.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { DataService } from './data-service.service';
 import { FormComponent } from './form/form.component';
-import { TodoListService } from './services/todo-list.service';
+import { TodoListService } from '././list-todo/todo-list.service';
 
 
 @NgModule({

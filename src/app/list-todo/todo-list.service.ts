@@ -1,9 +1,8 @@
-import { ApiService } from './api.service';
-import { NewTask } from './../models/new-task';
+import { ApiService } from '../api.service';
+import { NewTask } from './new-task';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
 
 @Injectable({
   providedIn: 'root'

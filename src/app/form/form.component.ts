@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
-import { TodoListService } from './../services/todo-list.service';
+import { TodoListService } from '../list-todo/todo-list.service';
 
 @Component({
   selector: 'app-form',
