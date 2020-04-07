@@ -11,6 +11,8 @@ export class CardComponent implements OnInit {
 
   @Input() todo;
   openCard: boolean = false;
+  showTrash: boolean = false;
+  removeCard: boolean = false;
 
   colors = ['#61bd4f','#eb5a46','#f2d600','#c377e0'];
 
@@ -35,10 +37,17 @@ export class CardComponent implements OnInit {
   }
 
   open() {
+    this.showTrash = !this.showTrash;
     if(this.todo.text.length > 20) this.openCard = !this.openCard;
   }
+
   verifyLength(value) {
     return value.length > 20;
+  }
+
+  remove(todo) {
+    console.log(todo)
+    this.removeCard = true;
   }
 
   ngOnInit() {}

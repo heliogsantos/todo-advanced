@@ -1,5 +1,6 @@
-<div class="wraper-card" (click)="open()" [style.border-color]="checkBorder(todo.label)">
-  <div class="container" [ngClass]="{'active': openCard && verifyLength(todo.text)}">
+<div class="wraper-card" (click)="open()" [style.border-color]="checkBorder(todo.label)"
+  [style.background-color]="checkBorder(todo.label)" [ngClass]="{'remove-card': removeCard}">
+  <div class="container" [ngClass]="{'active': openCard && verifyLength(todo.text) || showTrash}">
     <div class="row">
       <div class="col-8">
         <p class="title">{{todo.title | uppercase}}</p>
@@ -22,4 +23,5 @@
       </div>
     </div>
   </div>
+  <div class="trash" (click)="remove(todo)"></div>
 </div>
