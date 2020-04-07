@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { NewTask } from '../new-task';
+import { TodoListService } from '../todo-list.service';
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -7,13 +10,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private todoListService: TodoListService) { }
 
   @Input() todo;
   openCard: boolean = false;
   showTrash: boolean = false;
-  removeCard: boolean = false;
-
   colors = ['#61bd4f','#eb5a46','#f2d600','#c377e0'];
 
   checkBorder(border) {
@@ -43,11 +44,6 @@ export class CardComponent implements OnInit {
 
   verifyLength(value) {
     return value.length > 20;
-  }
-
-  remove(todo) {
-    console.log(todo)
-    this.removeCard = true;
   }
 
   ngOnInit() {}

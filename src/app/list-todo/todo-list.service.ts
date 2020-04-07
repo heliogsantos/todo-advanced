@@ -28,4 +28,8 @@ export class TodoListService {
   saveTodo(todo: NewTask[]): Observable<NewTask[]> {
     return this.http.post<NewTask[]>(`${this.url}/todos/` , JSON.stringify(todo), this.httpOptions);
   }
+
+  deleteTodo(todo: NewTask) {
+    return this.http.delete<NewTask>(`${this.url}/todos/${todo.id}`, this.httpOptions);
+  }
 }

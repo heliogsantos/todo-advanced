@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { NewTask } from './new-task';
 import { TodoListService } from './todo-list.service';
@@ -15,12 +15,29 @@ export class ListTodoComponent implements OnInit {
 
   todos: NewTask;
   textSearch: string;
+  removeCard: boolean = false;
+  @Input() deleteCard;
+
+  remove(todo) {
+    this.removeCard = true;
+    todo[0] = true;
+
+    this.todoListService.deleteTodo(todo).subscribe((todo) => {
+      setTimeout(() => {
+        this.listTodos();
+      }, 400);
+    });
+  }
+
+  private listTodos() {
+    this.todoListService.getTodos().subscribe((todo: NewTask) => {
+      this.todos = todo;
+    });
+  }
 
   ngOnInit() {
     this.data.mesagemFonte.subscribe(users => this.textSearch = users);
-       this.todoListService.getTodos().subscribe((todo: NewTask) => {
-        this.todos = todo;
-      });
-  }
 
+    this.listTodos();
+  }
 }
