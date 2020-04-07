@@ -35,10 +35,10 @@ export class CardComponent implements OnInit {
   }
 
   open() {
-    if(this.todo.text.length >= 30) this.openCard = !this.openCard;
+    if(this.todo.text.length > 20) this.openCard = !this.openCard;
   }
   verifyLength(value) {
-    return value.length >= 30;
+    return value.length > 20;
   }
 
   ngOnInit() {}

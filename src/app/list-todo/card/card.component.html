@@ -11,13 +11,13 @@
     <div class="row">
       <div class="col-12" *ngIf="!openCard">
         <p class="description">
-          {{todo.text | slice:0:31 | lowercase}}
+          {{todo.text.slice(0, 20)}}
           <strong *ngIf="verifyLength(todo.text)">. . .</strong>
         </p>
       </div>
     </div>
     <div class="row">
-      <div class="col-12 text-todo" *ngIf="verifyLength(todo.text)">
+      <div class="col-11" *ngIf="openCard">
         <p>{{todo.text | lowercase}}</p>
       </div>
     </div>
