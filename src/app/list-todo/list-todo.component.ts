@@ -17,12 +17,15 @@ export class ListTodoComponent implements OnInit {
   textSearch: string;
   removeCard: boolean = false;
   @Input() deleteCard;
+  @Input() spinner = true;
 
   remove(todo) {
+    this.spinner = true;
     this.removeCard = true;
     todo[0] = true;
 
     this.todoListService.deleteTodo(todo).subscribe((todo) => {
+      this.spinner = false;
       this.listTodos();
     });
   }
@@ -30,6 +33,7 @@ export class ListTodoComponent implements OnInit {
   private listTodos() {
     this.todoListService.getTodos().subscribe((todo: NewTask) => {
       this.todos = todo;
+      this.spinner = false;
     });
   }
 

@@ -2,51 +2,44 @@
   "todos": [
     {
       "title": "academia",
-      "text": "treinar perna",
+      "text": "treinar bíceps 💪",
       "houer": "2020-03-05T21:53:49.486Z",
       "id": 1,
       "label": "value2"
     },
     {
-      "title": "Casa ",
-      "text": "Lavar roupas",
-      "houer": "2020-03-05T21:58:58.690Z",
-      "id": 2,
-      "label": "value2"
-    },
-    {
-      "title": "Novo Flet",
-      "text": "Pegar as chaves",
-      "houer": "2020-03-05T21:59:58.566Z",
-      "id": 3,
-      "label": "value3"
-    },
-    {
-      "title": "Estudar",
-      "text": "Programação Reativa",
-      "houer": "2020-03-05T22:00:22.867Z",
-      "id": 4,
+      "title": "Assisti série",
+      "text": "La casa de papel 🤪",
+      "houer": "2020-03-05T22:04:11.143Z",
+      "id": 7,
       "label": "value1"
     },
     {
-      "title": "Entrevista",
-      "text": "Realizar entrevista na segunda-feira as 9:00",
-      "houer": "2020-03-05T22:01:04.485Z",
-      "id": 5,
-      "label": "value4"
-    },
-    {
-      "title": "Todo ",
-      "text": "Finalizar meu todo list",
-      "houer": "2020-03-05T22:01:57.138Z",
-      "id": 6,
+      "title": "Casa",
+      "text": "Arrumar meu quarto",
+      "houer": "2020-03-05T22:04:11.143Z",
+      "id": 7,
       "label": "value3"
     },
     {
-      "title": "Assisti série  ",
-      "text": "La casa de papel",
+      "title": "Trabalho",
+      "text": "Entrar as 9:00 para reunião",
       "houer": "2020-03-05T22:04:11.143Z",
       "id": 7,
+      "label": "value4"
+    },
+    {
+      "title": "Leitura",
+      "text": "Ler sobre Angular 9",
+      "houer": "2020-04-08T03:39:19.657Z",
+      "id": 8,
+      "label": "value2"
+    },
+    {
+      "title": "Projeto",
+      "text": "Iniciar projeto fit  😎",
+      "houer": "2020-04-08T03:40:28.368Z",
+      "id": 9,
       "label": "value4"
     }
   ]

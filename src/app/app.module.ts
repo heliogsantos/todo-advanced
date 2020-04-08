@@ -15,6 +15,7 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import { DataService } from './data-service.service';
 import { FormComponent } from './form/form.component';
 import { TodoListService } from '././list-todo/todo-list.service';
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { TodoListService } from '././list-todo/todo-list.service';
     ListTodoComponent,
     CardComponent,
     AddTaskComponent,
-    FormComponent
+    FormComponent,
+    LoaderComponent
   ],
   imports: [
     ReactiveFormsModule,

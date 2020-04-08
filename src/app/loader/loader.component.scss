@@ -1,0 +1,37 @@
+.spinner-wraper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .spinner {
+        width: 60px;
+        border: 2px solid #464545;
+        height: 60px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: spinner 0.6s linear infinite;
+
+        &::after {
+            content: '';
+            width: 13%;
+            height: 13%;
+            border-right: 2px solid #fd7373;
+        }
+    }
+}
+
+@keyframes spinner {
+   to {
+        transform: rotate(360deg);
+    }
+}

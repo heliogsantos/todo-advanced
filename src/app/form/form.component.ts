@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { TodoListService } from '../list-todo/todo-list.service';
 
@@ -13,6 +13,7 @@ export class FormComponent implements OnInit {
   constructor(private fb: FormBuilder, private todoListService: TodoListService, private router: Router) { }
 
   formTask: FormGroup;
+  @Input() spinner = false;
   
   labels: object[] = [
     {color: '#61bd4f', name: 'value1', id: 1},
@@ -51,7 +52,9 @@ export class FormComponent implements OnInit {
   }
 
   private saveTodo(param: any): Object {
+    this.spinner = true;
     return this.todoListService.saveTodo(param).subscribe(() => {
+      this.spinner = false;
       this.router.navigate(['']);
     });
   }
