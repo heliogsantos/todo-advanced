@@ -23,9 +23,7 @@ export class ListTodoComponent implements OnInit {
     todo[0] = true;
 
     this.todoListService.deleteTodo(todo).subscribe((todo) => {
-      setTimeout(() => {
-        this.listTodos();
-      }, 400);
+      this.listTodos();
     });
   }
 
